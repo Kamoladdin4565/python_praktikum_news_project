@@ -1,0 +1,15 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Texnologiya yangiliklari {% endblock title %}
+
+
+{% block content %}
+
+    {% for news in texnologiya_yangiliklar %}
+        <figure class="figure">
+            <a href="{{news.get_absolute_url}}" ><img src="{{ news.image.url }}" class="figure-img img-fluid rounded" alt="{{ news.title }}" width="400px"></a>
+            <figcaption class="figure-caption"><h2><a href="{{news.get_absolute_url}}" >{{ news.title }}</a></h2></figcaption>
+        </figure>
+    {% endfor %}
+{% endblock content %}

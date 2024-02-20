@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Batafsil xabarlar {% endblock title %}
+
+{% block content %}
+
+    <h2 align="center">{{ news.title }}</h2>
+    <h5>{{ news.publish_time }}</h5>
+    <img src="{{ news.image.url }}">
+    <h3 >{{ news.body }}</h3>
+
+
+{% endblock content %}

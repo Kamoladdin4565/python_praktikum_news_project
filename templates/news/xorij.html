@@ -1,0 +1,17 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Xorij yangiliklari {% endblock title %}
+
+
+{% block content %}
+
+    {% for new in xorij_yangiliklar %}
+        <figure class="figure">
+            <a href="{{new.get_absolute_url}}" ><img src="{{ new.image.url }}" class="figure-img img-fluid rounded" alt="{{ new.title }}" width="600px"></a>
+            <figcaption class="figure-caption"><h2><a href="{{new.get_absolute_url}}" >{{ new.title }}</a></h2></figcaption>
+        </figure>
+    {% endfor %}
+
+{% endblock content %}
+
